@@ -3,10 +3,14 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "npx nx serve shell"
+    "start": "npx nx serve shell",
+    "start-angular": "npx nx serve angular-app",
+    "start-react": "npx nx serve react-app",
+    "postinstall": "node ./decorate-angular-cli.js"
   },
   "private": true,
   "dependencies": {
+    "@angular-architects/module-federation": "^16.0.4",
     "@angular-architects/module-federation-tools": "^16.0.4",
     "@angular/animations": "~16.1.8",
     "@angular/common": "~16.1.8",

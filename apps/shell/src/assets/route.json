@@ -1,0 +1,9 @@
+[
+    {
+        "path": "react-app",
+        "srcPath": "http://localhost:4202/remoteEntry.js",
+        "appName": "React App",
+        "appType": "react",
+        "appRootElement": "react-app"
+    }
+]

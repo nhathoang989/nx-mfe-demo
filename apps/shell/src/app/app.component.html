@@ -1,7 +1,6 @@
 <ul class="remote-menu">
   <li><a routerLink="/">Home</a></li>
-  <li><a routerLink="angular-app">Angular</a></li>
-  <li><a routerLink="react-app">React App</a></li>
+  <li  *ngFor="let app of apps"><a [routerLink]="app.path">{{ app.appName }}</a></li>
 </ul>
 
 <router-outlet></router-outlet>
