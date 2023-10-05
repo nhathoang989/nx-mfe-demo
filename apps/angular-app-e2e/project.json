@@ -1,22 +1,22 @@
 {
-  "name": "shop-e2e",
+  "name": "angular-app-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/shop-e2e/src",
+  "sourceRoot": "apps/angular-app-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
       "executor": "@nx/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/shop-e2e/cypress.config.ts",
-        "devServerTarget": "shop:serve:development",
+        "cypressConfig": "apps/angular-app-e2e/cypress.config.ts",
+        "devServerTarget": "angular-app:serve:development",
         "testingType": "e2e"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "shop:serve:production"
+          "devServerTarget": "angular-app:serve:production"
         },
         "ci": {
-          "devServerTarget": "shop:serve-static"
+          "devServerTarget": "angular-app:serve-static"
         }
       }
     },
@@ -24,10 +24,10 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/shop-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": ["apps/angular-app-e2e/**/*.{js,ts}"]
       }
     }
   },
   "tags": [],
-  "implicitDependencies": ["shop"]
+  "implicitDependencies": ["angular-app"]
 }

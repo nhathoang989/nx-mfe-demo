@@ -1,25 +1,25 @@
 {
-  "name": "shop",
+  "name": "angular-app",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "src",
-  "sourceRoot": "apps/shop/src",
+  "sourceRoot": "apps/angular-app/src",
   "tags": [],
   "targets": {
     "build": {
       "executor": "@nx/angular:webpack-browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/shop",
-        "index": "apps/shop/src/index.html",
-        "main": "apps/shop/src/main.ts",
+        "outputPath": "dist/apps/angular-app",
+        "index": "apps/angular-app/src/index.html",
+        "main": "apps/angular-app/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "apps/shop/tsconfig.app.json",
-        "assets": ["apps/shop/src/favicon.ico", "apps/shop/src/assets"],
-        "styles": ["apps/shop/src/styles.scss"],
+        "tsConfig": "apps/angular-app/tsconfig.app.json",
+        "assets": ["apps/angular-app/src/favicon.ico", "apps/angular-app/src/assets"],
+        "styles": ["apps/angular-app/src/styles.scss"],
         "scripts": [],
         "customWebpackConfig": {
-          "path": "apps/shop/webpack.config.js"
+          "path": "apps/angular-app/webpack.config.js"
         }
       },
       "configurations": {
@@ -38,7 +38,7 @@
           ],
           "outputHashing": "all",
           "customWebpackConfig": {
-            "path": "apps/shop/webpack.prod.config.js"
+            "path": "apps/angular-app/webpack.prod.config.js"
           }
         },
         "development": {
@@ -60,10 +60,10 @@
       },
       "configurations": {
         "production": {
-          "browserTarget": "shop:build:production"
+          "browserTarget": "angular-app:build:production"
         },
         "development": {
-          "browserTarget": "shop:build:development"
+          "browserTarget": "angular-app:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -71,21 +71,21 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "shop:build"
+        "browserTarget": "angular-app:build"
       }
     },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/shop/**/*.ts", "apps/shop/**/*.html"]
+        "lintFilePatterns": ["apps/angular-app/**/*.ts", "apps/angular-app/**/*.html"]
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/shop/jest.config.ts",
+        "jestConfig": "apps/angular-app/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
@@ -99,16 +99,16 @@
       "executor": "@nx/web:file-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "shop:build",
+        "buildTarget": "angular-app:build",
         "port": 4201,
         "watch": false
       },
       "configurations": {
         "development": {
-          "buildTarget": "shop:build:development"
+          "buildTarget": "angular-app:build:development"
         },
         "production": {
-          "buildTarget": "shop:build:production"
+          "buildTarget": "angular-app:build:production"
         }
       }
     }

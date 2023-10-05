@@ -1,3 +1,3 @@
-declare module 'shop/Module';
+declare module 'angular-app/Module';
 declare module 'react-app/Module';
 

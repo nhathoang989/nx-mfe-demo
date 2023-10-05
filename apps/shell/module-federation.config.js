@@ -1,4 +1,4 @@
 module.exports = {
   name: 'shell',
-  remotes: ['shop', 'react-app'],
+  remotes: ['angular-app', 'react-app'],
 };

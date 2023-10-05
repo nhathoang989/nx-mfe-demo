@@ -8,20 +8,11 @@ import { loadRemoteModule } from '@angular-architects/module-federation';
 import { environment } from '../environments/environment';
 export const appRoutes: Route[] = [
   {
-    path: 'shop',
+    path: 'angular-app',
     loadChildren: () =>
       loadRemoteModule({
         type: 'module',
         remoteEntry:`${environment.angularRemoteEntry}/remoteEntry.mjs`,
-        exposedModule: './Module',
-      }).then((m) => m.RemoteEntryModule),
-  },
-  {
-    path: 'shop/mqtt',
-    loadChildren: () =>
-      loadRemoteModule({
-        type: 'module',
-        remoteEntry: `${environment.angularRemoteEntry}/remoteEntry.mjs`,
         exposedModule: './Module',
       }).then((m) => m.RemoteEntryModule),
   },

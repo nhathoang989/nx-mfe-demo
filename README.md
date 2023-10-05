@@ -7,18 +7,18 @@
 **Generating applications**
 ```
 # React
-npx nx g @nx/react:host shell --remotes=shop,cart
+npx nx g @nx/react:host shell --remotes=angular-app,cart
 npx nx g @nx/react:remote about --host=shell
 
 # Angular
-npx nx g @nx/angular:host shell --remotes=shop,cart
+npx nx g @nx/angular:host shell --remotes=angular-app,cart
 npx nx g @nx/angular:remote about --host=shell
 ```
 
 **Run applications**
 ```
 npm i
-npx nx serve shell --devRemotes=cart,shop
+npx nx serve shell --devRemotes=cart,angular-app
 ```
 **View interactive project graph**
 ```
