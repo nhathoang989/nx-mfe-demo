@@ -4,7 +4,6 @@
   "license": "MIT",
   "scripts": {
     "start": "npx nx serve shell",
-    "start-angular": "npx nx serve angular-app",
     "start-react": "npx nx serve react-app",
     "postinstall": "node ./decorate-angular-cli.js"
   },
